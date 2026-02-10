@@ -1,41 +1,53 @@
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig, defineRecipe } from "@pandacss/dev";
 
 export default defineConfig({
-  // Whether to use css reset
   preflight: true,
-
-  // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}", "./src/app/**/*.{ts,tsx,js,jsx}"],
-
-  // Files to exclude
+  include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
 
-  // Theme customization
   theme: {
     extend: {
       semanticTokens: {
         colors: {
           background: {
-            value: { base: '{colors.white}', _dark: '{colors.green.950}', _forest: '{colors.green.950}' }
+            
+            value: { 
+              base: '{colors.white}', 
+              _dark: '{colors.slate.950}', 
+              _forest: '{colors.green.950}' 
+            }
           },
           text: {
-            value: { base: '{colors.slate.900}', _dark: '{colors.white}', _forest: '{colors.green.50}' }
+            value: { 
+              base: '{colors.slate.900}', 
+              _dark: '{colors.white}', 
+              _forest: '{colors.green.50}' 
+            }
           },
           accent: {
-            value: {base: '{colors.green.500', _dark: '{colors.green.400}', _forest: '{colors.lime.400}' }
- }
+            value: { 
+              base: '{colors.green.500}', 
+              _dark: '{colors.green.400}', 
+              _forest: '{colors.lime.400}' 
+            }
+          }  
         }
       }
     }
   },
+
   conditions: {
     extend: {
-      forest: '[data-theme="forest"] &',
+      
       dark: '[data-theme="dark"] &',
+      forest: '[data-theme="forest"] &',
     }
-  }
-  
+  },
 
-  // The output directory for your css system
-  outdir: "styled-system",
+  outdir: "src/styled-system",
+  jsxFramework: "react",
 });
+
+export const cultivoCard = defineRecipe({
+  
+})

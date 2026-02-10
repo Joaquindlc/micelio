@@ -6,32 +6,31 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-import { css } from '../../styled-system/css';
+
+import { css } from '@/styled-system/css';
 
 export default function Home() {
   return (
-    <> 
-      <div className={css({ 
-          display: 'flex', 
-          height: '100vh', 
-          flexDirection: 'column', // Añadido para que el botón no tape el texto
-          alignItems: 'center', 
-          justifyContent: 'center',
-          bg: 'green.50'
-        })}>
-        <h1 className={css({ 
-            fontSize: '4xl', 
-            fontWeight: 'bold', 
-            color: 'green.700',
-            transition: 'transform 0.2s',
-            mb: '4', // Margen inferior para separar del botón
-            _hover: { transform: 'scale(1.05)' } 
-          })}>
-          🌿 Micelio Ready
-        </h1>
-
-        
-        <SignedOut>
+    <main className={css({ 
+      display: 'flex', 
+      minH: 'calc(100vh - 64px)', // Ajuste para que no scrollee por el Navbar
+      alignItems: 'center', 
+      justifyContent: 'center',
+      bg: 'background', 
+      color: 'text',
+      transition: 'background 0.3s ease' // Suaviza el cambio de tema
+    })}>
+      asdasd
+      <h1 className={css({ 
+        fontSize: '4xl', 
+        fontWeight: 'bold', 
+        color: 'accent' 
+      })}>
+        🌿 Home Page
+      </h1>
+ 
+    </main>
+/*           <SignedOut>
           <div className={css({ display: 'flex', gap: '4' })}>
             <SignInButton mode="modal" />
             <SignUpButton>
@@ -42,10 +41,9 @@ export default function Home() {
           </div>
         </SignedOut>
 
-        <SignedIn>
+         <SignedIn>
           <UserButton />
-        </SignedIn>
-      </div>
-    </>
+        </SignedIn>  */
   );
 }
+/*       */
