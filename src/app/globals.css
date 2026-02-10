@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@layer reset, base, tokens, recipes, utilities;
 
 :root {
   --background: #ffffff;
