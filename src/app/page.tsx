@@ -6,8 +6,8 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-
 import { css } from '@/styled-system/css';
+import {CultivoCard} from '../components/CultivoCard';
 
 export default function Home() {
   return (
@@ -28,6 +28,7 @@ export default function Home() {
       })}>
         🌿 Home Page
       </h1>
+      <CultivoCard/>
  
     </main>
 /*           <SignedOut>
