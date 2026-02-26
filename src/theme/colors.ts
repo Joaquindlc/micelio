@@ -70,5 +70,13 @@ export const themeColors = {
       _night: '#334155',
       _dracula: '#BD93F9',
     }
+  },
+  shadow: {
+    value: {
+      base: 'rgba(0, 0, 0, 0.1)',    // Sombra suave para temas claros
+      _luxury: 'rgba(0, 0, 0, 0.6)', // Sombra muy oscura para Luxury
+      _coffee: 'rgba(0, 0, 0, 0.5)', 
+      _dracula: 'rgba(0, 0, 0, 0.9)', // Sombra intensa para Dracula
+    }
   }
 };

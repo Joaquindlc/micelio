@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev';
 
 export const cardRecipe = defineRecipe({
-  className: 'card',
+  className: 'cardRecipe',
   description: 'Tarjeta bento para el dashboard',
   base: {
     display: 'flex',
@@ -11,7 +11,13 @@ export const cardRecipe = defineRecipe({
     bg: 'bg.default',
     border: '1px solid',
     borderColor: 'accent/20',
-    transition: 'all 0.2s ease',
+    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    _hover: {
+      transform: 'translateY(-6px)',
+      // Usamos nuestro token de sombra con valores de elevación mayores
+      boxShadow: '0 12px 24px -8px {colors.shadow}', 
+      borderColor: 'accent/40',
+    }
   },
   variants: {
     size: {
@@ -24,7 +30,7 @@ export const cardRecipe = defineRecipe({
         bg: 'green.500', 
         color: 'white', 
         borderColor: 'transparent',
-        __hover: { bg: 'green.600' }
+        _hover: { bg: 'green.600' }
       }
     }
   },
@@ -47,7 +53,9 @@ export const taskPill = defineRecipe({
     fontWeight: 'medium',
     border: '1px solid',
     transition: 'all 0.2s ease',
-    cursor: "pointer"
+    cursor: "pointer",
+        _hover: { transform: "translateY(-4px)", boxShadow: "xl" },
+   
   },
   variants: {
     status: {

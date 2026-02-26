@@ -1,5 +1,7 @@
 import { css } from "@/styled-system/css";
 import { flex } from "@/styled-system/patterns";
+import {card} from "@/styled-system/recipes";
+
 
 interface BentoCardProps {
   title: string;
@@ -19,7 +21,7 @@ export const BentoCard = ({
   variant = "default",
 }: BentoCardProps) => {
   return (
-    <div
+    {/* <div
       className={css({
         display: "flex",
         flexDirection: "column",
@@ -34,8 +36,13 @@ export const BentoCard = ({
         gridRow: variant === "large" ? "span 2" : "span 1",
         transition: "all 0.2s ease",
         _hover: { transform: "translateY(-4px)", boxShadow: "xl" },
-      })}
+      })} 
     >
+      */}
+      <div className={card({ 
+        size: variant === "large" ? "large" : "small",
+        status: variant === "active" ? "active" : "default" 
+      })}>
       <div
         className={flex({ justify: "space-between", align: "center", mb: "4" })}
       >

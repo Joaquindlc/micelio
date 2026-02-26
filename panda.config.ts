@@ -10,7 +10,7 @@ export default defineConfig({
   theme: {
     extend: {
       recipes: {
-        card: cardRecipe,
+        card,
         taskPill
       },
       semanticTokens: {
